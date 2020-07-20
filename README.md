@@ -2,7 +2,6 @@
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=sgellock&show_icons=true&theme=dark&hide=["stars"])](https://github.com/anuraghazra/github-readme-stats)
 
-<!-- Conversational AI Engineering -->
 
 <!--
 **sgellock/sgellock** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
