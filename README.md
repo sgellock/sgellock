@@ -1,6 +1,6 @@
 <!-- ### Scott Gellock -->
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=sgellock&show_icons=true&theme=tokyonight&hide=["stars"])](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=sgellock&show_icons=true&theme=tokyonight&hide=stars)](https://github.com/anuraghazra/github-readme-stats)
 
 
 <!--
