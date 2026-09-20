@@ -1,5 +1,3 @@
-# Scott Gellock
-
 ![Contribution totals for the past 365 days](./.github/assets/profile-0-d0eb00d3e1ff.svg#gh-light-mode-only)
 ![Contribution totals for the past 365 days](./.github/assets/profile-0-1264068a7848.svg#gh-dark-mode-only)
 
