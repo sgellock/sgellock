@@ -10,12 +10,12 @@ Microsoft Copilot Studio · Conversational AI Platform Engineering
 ![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-04238e7d6ad0.svg#gh-light-mode-only)
 ![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-d01f507731ad.svg#gh-dark-mode-only)
 
-![Active repositories and their primary languages](./.github/assets/profile-2-4e880b227a6f.svg#gh-light-mode-only)
-![Active repositories and their primary languages](./.github/assets/profile-2-a540ccf8f5cd.svg#gh-dark-mode-only)
+![Active repositories and their primary languages](./.github/assets/profile-2-c2c790f9216b.svg#gh-light-mode-only)
+![Active repositories and their primary languages](./.github/assets/profile-2-e5d5105c8e09.svg#gh-dark-mode-only)
 
 **Reporting period:** 2025-09-20 – 2026-09-19 (365 complete UTC days).
 
-**Last successful refresh:** 2026-09-20 16:53 UTC.
+**Last successful refresh:** 2026-09-20 17:03 UTC.
 
 **Coverage:** Public and private contribution history available to the credential. Repository details are published only as aggregate counts.
 
