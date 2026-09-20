@@ -106,7 +106,7 @@ test('strict public schema rejects raw/private fields and unsafe SVG dependencie
   assert.throws(() => verifySvg('<svg><script>alert(1)</script></svg>'), /active/);
 });
 
-test('render real package, verify three local SVGs, reject secret fields, and preserve output on failure', async () => {
+test('render real package, verify three light/dark card pairs, reject secret fields, and preserve output on failure', async () => {
   const root = await mkdtemp(join(tmpdir(), 'profile-test-'));
   try {
     await copyFile(new URL('../readme.source.md', import.meta.url), join(root, 'readme.source.md'));

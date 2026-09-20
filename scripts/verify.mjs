@@ -54,8 +54,13 @@ export function verifySvg(svg) {
 
 export async function verifyOutput(root) {
   const readme = await readFile(resolve(root, 'README.md'), 'utf8');
-  const images = [...readme.matchAll(/!\[[^\]]*\]\((\.\/\.github\/assets\/profile-\d+-[a-f0-9]{12}\.svg)/g)];
-  assert(images.length === 3, 'Expected three local profile images.');
+  const images = [...readme.matchAll(/!\[[^\]]*\]\((\.\/\.github\/assets\/profile-\d+-[a-f0-9]{12}\.svg)#gh-(light|dark)-mode-only\)/g)];
+  assert(images.length === 6, 'Expected light and dark versions of three local profile images.');
+  for (let i = 0; i < 3; i++) {
+    for (const mode of ['light', 'dark']) {
+      assert(images.filter(([, path, theme]) => path.includes(`/profile-${i}-`) && theme === mode).length === 1, 'Missing or duplicate themed card.');
+    }
+  }
   assert(!/!\[[^\]]*\]\(https?:|<img[^>]+src=["']https?:|github-readme-stats\.vercel\.app/.test(readme), 'README depends on a remote image service.');
   assert(!readme.includes('<!-- PROFILE_SUMMARY -->') && !readme.includes('```aura'), 'README generation is incomplete.');
   for (const [, path] of images) verifySvg(await readFile(resolve(root, path), 'utf8'));

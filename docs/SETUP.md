@@ -48,7 +48,7 @@ npm run verify
 
 To refresh real data, supply the dedicated credential securely in the `PROFILE_STATS_TOKEN` environment variable, then run `npm run build`. Do not put the value in command history. The default build requires complete accessible private detail; no sample-data mode exists in the production command.
 
-Edit `readme.source.md` for content and layout. The source uses the pinned package's parser and renderer directly. Those are internal package entry points, so upgrades should be deliberate and pass the render tests before changing the lockfile. The upstream CLI is intentionally bypassed because it collects public-only repository statistics and substitutes sample data on failure.
+Edit `readme.source.md` for content and layout. `scripts/themes.mjs` holds the GitHub-style light/dark palette. Each card is rendered in both themes, and GitHub selects its variant using `#gh-light-mode-only` and `#gh-dark-mode-only` image fragments. The source uses the pinned package's parser and renderer directly. Those are internal package entry points, so upgrades should be deliberate and pass the render tests before changing the lockfile. The upstream CLI is intentionally bypassed because it collects public-only repository statistics and substitutes sample data on failure.
 
 To disable automatic updates, disable the Profile workflow in Actions. Existing README images remain available. To roll back the migration, revert its merge commit.
 

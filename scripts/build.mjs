@@ -8,6 +8,7 @@ import { renderBlock } from 'readme-aura/dist/renderer.js';
 import { parseSource } from 'readme-aura/dist/parser.js';
 import { collect, makeClient } from './collect.mjs';
 import { verifySnapshot, verifySvg } from './verify.mjs';
+import { THEMES } from './themes.mjs';
 
 const require = createRequire(import.meta.url);
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -34,14 +35,20 @@ export async function build({ root = ROOT, request, now = new Date(), snapshot, 
     for (const block of parsed.blocks) {
       // Pass only our validated aggregate object. Do not use the upstream CLI,
       // its public-only collector, or its sample-data fallback.
-      const svg = await renderBlock(block, fonts, { stats });
-      verifySvg(svg);
-      const hash = createHash('sha256').update(svg).digest('hex').slice(0, 12);
-      const filename = `profile-${block.index}-${hash}.svg`;
-      await writeFile(join(stage, filename), svg);
-      files.push(filename);
-      markdown = markdown.replaceAll(`readme-aura-component-${block.index}.svg`, filename)
-        .replaceAll(`![readme-aura-component-${block.index}]`, `![${descriptions[block.index]}]`);
+      const images = [];
+      for (const [mode, theme] of Object.entries(THEMES)) {
+        const svg = await renderBlock(block, fonts, { stats, theme });
+        verifySvg(svg);
+        const hash = createHash('sha256').update(svg).digest('hex').slice(0, 12);
+        const filename = `profile-${block.index}-${hash}.svg`;
+        await writeFile(join(stage, filename), svg);
+        files.push(filename);
+        images.push(`![${descriptions[block.index]}](./.github/assets/${filename}#gh-${mode}-mode-only)`);
+      }
+      markdown = markdown.replace(
+        new RegExp(`!\\[readme-aura-component-${block.index}\\]\\([^\\n]+\\)`),
+        images.join('\n'),
+      );
     }
     const format = n => n === null ? 'Unavailable' : n.toLocaleString('en-US');
     const coverage = stats.coverage === 'aggregate-only'
