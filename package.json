@@ -1,0 +1,12 @@
+{
+  "name": "sgellock-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "verify": "node scripts/verify.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": { "readme-aura": "1.0.20", "@fontsource/inter": "5.2.8" }
+}

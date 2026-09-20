@@ -1,0 +1,78 @@
+name: Profile
+
+on:
+  push:
+    paths:
+      - readme.source.md
+      - scripts/**
+      - test/**
+      - package.json
+      - package-lock.json
+      - .github/workflows/profile.yml
+  pull_request:
+  schedule:
+    - cron: '23 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run verify
+
+  refresh:
+    needs: validate
+    # PR validation never reads secrets. Trusted branch pushes allow a real-data
+    # preview before merging; schedules always use the default branch.
+    if: github.event_name != 'pull_request' && github.repository == 'sgellock/sgellock'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Collect and render validated activity
+        run: npm run build
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+      - run: npm run verify
+      - name: Commit generated output
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- README.md .github/assets
+          if git diff --cached --quiet; then
+            echo 'Profile already current.'
+            exit 0
+          fi
+          git commit -m 'Refresh profile activity [skip ci]'
+          gh auth setup-git
+          git push origin "HEAD:$TARGET_BRANCH"
+
