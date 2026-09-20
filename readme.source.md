@@ -1,9 +1,5 @@
 # Scott Gellock
 
-Microsoft Copilot Studio · Conversational AI Platform Engineering
-
-[Website](https://www.gellock.com) · [GitHub](https://github.com/sgellock)
-
 ```aura width=800 height=380
 <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', background: theme.canvas, color: theme.text, padding: 32, borderRadius: 6, border: `1px solid ${theme.border}` }}>
   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
