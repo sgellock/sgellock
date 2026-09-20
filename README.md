@@ -1,15 +1,15 @@
-![Contribution totals for the past 365 days](./.github/assets/profile-0-249dd10b7367.svg#gh-light-mode-only)
-![Contribution totals for the past 365 days](./.github/assets/profile-0-fa7a9245168c.svg#gh-dark-mode-only)
+![Contribution totals for the past 365 days](./.github/assets/profile-0-3d655662229c.svg#gh-light-mode-only)
+![Contribution totals for the past 365 days](./.github/assets/profile-0-2ba80fc79cb9.svg#gh-dark-mode-only)
 
-![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-04238e7d6ad0.svg#gh-light-mode-only)
-![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-d01f507731ad.svg#gh-dark-mode-only)
+![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-5fb6d3bd7438.svg#gh-light-mode-only)
+![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-b94167e2b764.svg#gh-dark-mode-only)
 
-![Active repositories and their primary languages](./.github/assets/profile-2-06a0dd33e0a0.svg#gh-light-mode-only)
-![Active repositories and their primary languages](./.github/assets/profile-2-5e8af3763c27.svg#gh-dark-mode-only)
+![Active repositories and their primary languages](./.github/assets/profile-2-6bdbc6bafb62.svg#gh-light-mode-only)
+![Active repositories and their primary languages](./.github/assets/profile-2-b448ce041bea.svg#gh-dark-mode-only)
 
 **Reporting period:** 2025-09-20 – 2026-09-19 (365 complete UTC days).
 
-**Last successful refresh:** 2026-09-20 17:13 UTC.
+**Last successful refresh:** 2026-09-20 17:23 UTC.
 
 **Coverage:** Public and private contribution history available to the credential. Repository details are published only as aggregate counts.
 
