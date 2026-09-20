@@ -1,10 +1,9 @@
 ```aura width=800 height=380
 <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', background: theme.canvas, color: theme.text, padding: 32, borderRadius: 6, border: `1px solid ${theme.border}` }}>
   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-    <div style={{ display: 'flex', fontSize: 30, fontWeight: 700 }}>A year of building</div>
+    <div style={{ display: 'flex', fontSize: 30, fontWeight: 700 }}>Repository contribution activity</div>
     <div style={{ display: 'flex', fontSize: 18, color: theme.muted }}>PAST 365 DAYS</div>
   </div>
-  <div style={{ display: 'flex', marginTop: 10, fontSize: 20, color: theme.muted }}>Public + private contribution activity</div>
   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginTop: 26 }}>
     {[
       ['Contributions', stats.totals.contributions, theme.text],
