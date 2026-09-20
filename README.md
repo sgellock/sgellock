@@ -10,12 +10,12 @@ Microsoft Copilot Studio · Conversational AI Platform Engineering
 ![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-04238e7d6ad0.svg#gh-light-mode-only)
 ![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-d01f507731ad.svg#gh-dark-mode-only)
 
-![Active repositories and their primary languages](./.github/assets/profile-2-c2c790f9216b.svg#gh-light-mode-only)
-![Active repositories and their primary languages](./.github/assets/profile-2-e5d5105c8e09.svg#gh-dark-mode-only)
+![Active repositories and their primary languages](./.github/assets/profile-2-06a0dd33e0a0.svg#gh-light-mode-only)
+![Active repositories and their primary languages](./.github/assets/profile-2-5e8af3763c27.svg#gh-dark-mode-only)
 
 **Reporting period:** 2025-09-20 – 2026-09-19 (365 complete UTC days).
 
-**Last successful refresh:** 2026-09-20 17:03 UTC.
+**Last successful refresh:** 2026-09-20 17:07 UTC.
 
 **Coverage:** Public and private contribution history available to the credential. Repository details are published only as aggregate counts.
 
@@ -48,7 +48,7 @@ Microsoft Copilot Studio · Conversational AI Platform Engineering
 | 2026-09-06 – 2026-09-12 | 9 |
 | 2026-09-13 – 2026-09-19 | 25 |
 
-TypeScript: 6 active repositories · HTML: 1 active repositories · Python: 1 active repositories · Shell: 1 active repositories
+TypeScript: 6 active repositories · HTML: 1 active repositories · JavaScript: 1 active repositories · Python: 1 active repositories · Shell: 1 active repositories
 
 </details>
 
