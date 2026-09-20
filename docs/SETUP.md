@@ -1,6 +1,6 @@
 # Profile maintenance
 
-The profile uses readme-aura 1.0.20 (the published version verified at implementation time), with an exact npm lockfile and bundled Inter fonts. GitHub serves the generated SVGs. No separate hosting account or runtime image API is needed.
+The profile uses readme-aura 1.0.20 (the published version verified at implementation time), with an exact npm lockfile and bundled Mona Sans fonts. GitHub serves the generated SVGs. No separate hosting account or runtime image API is needed.
 
 ## One-time credential setup
 

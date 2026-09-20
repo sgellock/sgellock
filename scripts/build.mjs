@@ -21,11 +21,11 @@ export async function build({ root = ROOT, request, now = new Date(), snapshot, 
   }
   const stage = await mkdtemp(join(tmpdir(), 'profile-render-'));
   try {
-    const fontRoot = join(dirname(require.resolve('@fontsource/inter/metadata.json')), 'files');
-    const fonts = await Promise.all([400, 700].map(async weight => ({
-      name: 'Inter', weight, style: 'normal',
+    const fontRoot = join(dirname(require.resolve('@fontsource/mona-sans/metadata.json')), 'files');
+    const fonts = await Promise.all([400, 600].map(async weight => ({
+      name: 'Mona Sans', weight, style: 'normal',
       // Read bundled fonts directly: no network/CDN fallback.
-      data: await readFile(join(fontRoot, `inter-latin-${weight}-normal.woff`)),
+      data: await readFile(join(fontRoot, `mona-sans-latin-${weight}-normal.woff`)),
     })));
     const parsed = await parseSource(join(root, 'readme.source.md'), join(root, '.github/assets'), join(root, 'README.md'));
     if (parsed.blocks.length !== 3) throw new Error('Expected three profile cards.');
