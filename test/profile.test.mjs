@@ -3,12 +3,29 @@ import assert from 'node:assert/strict';
 import { mkdtemp, copyFile, readFile, writeFile, rm, readdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import satori from 'satori';
 import { collect, makeClient, reportingWindow, activeRepositories, GROUPS } from '../scripts/collect.mjs';
 import { build } from '../scripts/build.mjs';
 import { verifySnapshot, verifyOutput, verifySvg } from '../scripts/verify.mjs';
 
 const NOW = new Date('2026-09-20T12:00:00Z');
 const DAY = 86400000;
+
+test('Satori escapes SVG attribute injection and rejects internal style injection', async () => {
+  const fonts = [{
+    name: 'Mona Sans', weight: 400, style: 'normal',
+    data: await readFile(new URL('../node_modules/@fontsource/mona-sans/files/mona-sans-latin-400-normal.woff', import.meta.url)),
+  }];
+  const options = { width: 100, height: 100, fonts, embedFont: false };
+  const payload = 'red"/><path data-pwned="true"/><text fill="red';
+  const svg = await satori({ type: 'div', props: { style: { color: payload }, children: 'safe' } }, options);
+  assert.doesNotMatch(svg, /<path data-pwned="true"/);
+  assert.ok(svg.includes('fill="red&quot;/&gt;&lt;path data-pwned=&quot;true&quot;/&gt;&lt;text fill=&quot;red"'));
+  await assert.rejects(satori({ type: 'div', props: {
+    style: { _inheritedClipPathId: 'x)"/><path data-pwned="true"/><g data-x="' },
+  } }, options), /Invalid style property/);
+});
+
 function fixture({ restricted = 0, detailAccess = true } = {}) {
   const from = Date.parse(reportingWindow(NOW).from);
   const raw = {
