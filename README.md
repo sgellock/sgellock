@@ -9,7 +9,7 @@
 
 **Reporting period:** 2025-11-05 – 2026-11-04 (365 complete UTC days).
 
-**Last successful refresh:** 2026-11-05 13:04 UTC.
+**Last successful refresh:** 2026-11-05 18:51 UTC.
 
 **Coverage:** Public and private contribution history available to the credential. Repository details are published only as aggregate counts.
 
