@@ -1,15 +1,15 @@
-![Contribution totals for the past 365 days](./.github/assets/profile-0-a9d26f0d3b24.svg#gh-light-mode-only)
-![Contribution totals for the past 365 days](./.github/assets/profile-0-3745ee24b415.svg#gh-dark-mode-only)
+![Contribution totals for the past 365 days](./.github/assets/profile-0-5d25017a0bfc.svg#gh-light-mode-only)
+![Contribution totals for the past 365 days](./.github/assets/profile-0-08da7987d0d0.svg#gh-dark-mode-only)
 
-![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-baa954c00bb6.svg#gh-light-mode-only)
-![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-b996590acf38.svg#gh-dark-mode-only)
+![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-c9e363dba5c3.svg#gh-light-mode-only)
+![Weekly contribution activity for the past 90 days](./.github/assets/profile-1-2f295bf496a8.svg#gh-dark-mode-only)
 
 ![Active repositories and their primary languages](./.github/assets/profile-2-e4021cecac76.svg#gh-light-mode-only)
 ![Active repositories and their primary languages](./.github/assets/profile-2-ccf2ce80bee8.svg#gh-dark-mode-only)
 
-**Reporting period:** 2025-11-25 – 2026-11-24 (365 complete UTC days).
+**Reporting period:** 2025-11-26 – 2026-11-25 (365 complete UTC days).
 
-**Last successful refresh:** 2026-11-25 20:31 UTC.
+**Last successful refresh:** 2026-11-26 20:18 UTC.
 
 **Coverage:** Public and private contribution history available to the credential. Repository details are published only as aggregate counts.
 
@@ -18,29 +18,29 @@
 
 | Metric | Value |
 | --- | ---: |
-| Contributions | 3,910 |
-| Commit contributions | 3,253 |
+| Contributions | 3,908 |
+| Commit contributions | 3,251 |
 | Pull requests opened | 550 |
 | Reviews submitted | 7 |
 | Active repositories | 9 |
-| Contributions in the past 90 days | 221 |
+| Contributions in the past 90 days | 220 |
 | Active days in the past 30 days | 4 |
 
 | Activity period | Contributions |
 | --- | ---: |
-| 2026-08-27 – 2026-09-01 | 19 |
-| 2026-09-02 – 2026-09-08 | 15 |
-| 2026-09-09 – 2026-09-15 | 25 |
-| 2026-09-16 – 2026-09-22 | 30 |
-| 2026-09-23 – 2026-09-29 | 22 |
-| 2026-09-30 – 2026-10-06 | 21 |
-| 2026-10-07 – 2026-10-13 | 42 |
-| 2026-10-14 – 2026-10-20 | 18 |
-| 2026-10-21 – 2026-10-27 | 8 |
-| 2026-10-28 – 2026-11-03 | 19 |
-| 2026-11-04 – 2026-11-10 | 2 |
-| 2026-11-11 – 2026-11-17 | 0 |
-| 2026-11-18 – 2026-11-24 | 0 |
+| 2026-08-28 – 2026-09-02 | 19 |
+| 2026-09-03 – 2026-09-09 | 15 |
+| 2026-09-10 – 2026-09-16 | 25 |
+| 2026-09-17 – 2026-09-23 | 35 |
+| 2026-09-24 – 2026-09-30 | 20 |
+| 2026-10-01 – 2026-10-07 | 18 |
+| 2026-10-08 – 2026-10-14 | 45 |
+| 2026-10-15 – 2026-10-21 | 20 |
+| 2026-10-22 – 2026-10-28 | 5 |
+| 2026-10-29 – 2026-11-04 | 16 |
+| 2026-11-05 – 2026-11-11 | 2 |
+| 2026-11-12 – 2026-11-18 | 0 |
+| 2026-11-19 – 2026-11-25 | 0 |
 
 TypeScript: 5 active repositories · HTML: 1 active repositories · JavaScript: 1 active repositories · Python: 1 active repositories · Shell: 1 active repositories
 
